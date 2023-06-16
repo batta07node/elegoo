@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style-two.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Buon Compleanno LOREEE!!!!</title>
+    <link rel="icon" href="https://imgur.com/VYjygu7.png">
+    <script src="../script.js"></script>
+
+</head>
+<body>
+    
+    <a href="../../sceglisensore/index.html" class="a-back-home">
+        <p class="p-arrow">
+            &lt;--
+        </p>
+    </a>
+
+    <div class="div-line"></div>
+    
+    <div class="top-element">
+        <div class="div-ul-top">
+            <ul class="ul">
+                <li><button onclick="openPdfTop()">manual</button></li>
+            </ul>
+            <ul class="ul">
+                <li><a id="a-top">code</a></li>
+            </ul>
+            <ul class="ul">
+                <li><a id="video-top">video</a></li>
+            </ul>
+        </div>
+
+        <p class="p-top">PHOTO RESISTOR</p>
+    </div>
+
+    <div class="bottom-element">
+        <div class="div-ul-bottom">
+            <ul class="ul">
+                <li><button onclick="openPdfBottom()">manual</button></li>   
+            </ul>
+            <ul class="ul">
+                <li><a id="a-bottom">code</a></li>
+            </ul>
+            <ul class="ul">
+                <li><a id="video-bottom">video</a></li>
+            </ul>
+        </div>
+
+        <p class="p-bottom">7 COLOR FLASH</p>
+    </div>
+
+    <div class="div-pdf" id="div-pdf-top" style="display: none;">
+        <button class="button-close" onclick="closePdfTop()">
+            <img src="../close.png" alt="x">
+        </button>
+        <embed id="embed-top" type="application/pdf" width="100%" height="100%" />  
+    </div>
+
+    <div class="div-pdf" id="div-pdf-bottom" style="display: none;">
+        <button class="button-close" onclick="closePdfBottom()">
+            <img src="../close.png" alt="x">
+        </button>
+        <embed id="embed-bottom" type="application/pdf" width="100%" height="100%" />  
+    </div>
+
+    <script>
+        document.getElementById('embed-top').src = "./sopra/pdf.pdf"
+        document.getElementById('a-top').href = "./sopra/code.ino"
+        document.getElementById('video-top').href = "https://www.youtube.com/watch?v=4fN1aJMH9mM"
+
+        document.getElementById('embed-bottom').src = "./sotto/pdf.pdf"
+        document.getElementById('a-bottom').href = "./sotto/code.ino"
+        document.getElementById('video-bottom').href = "https://www.youtube.com/watch?v=TN4ByfN2Esk"
+
+        
+
+
+        let PdfBottom = document.getElementById('div-pdf-bottom')
+
+        function openPdfBottom() {
+            PdfBottom.style.display = 'block'
+        }
+
+        function closePdfBottom() {
+            PdfBottom.style.display = 'none'
+        }
+
+        let PdfTop = document.getElementById('div-pdf-top')
+
+        function openPdfTop() {
+            PdfTop.style.display = 'block'
+        }
+
+        function closePdfTop() {
+            PdfTop.style.display = 'none'
+        }
+    </script>
+
+</body>
+</html>

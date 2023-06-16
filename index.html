@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Buon Compleanno LOREEE!!!!</title>
+    <link rel="icon" href="https://imgur.com/VYjygu7.png">
+</head>
+<body>
+    
+    <div id="false" aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
+        <div class="wheel"></div>
+        <div class="hamster">
+            <div class="hamster__body">
+                <div class="hamster__head">
+                    <div class="hamster__ear"></div>
+                    <div class="hamster__eye"></div>
+                    <div class="hamster__nose"></div>
+                </div>
+                <div class="hamster__limb hamster__limb--fr"></div>
+                <div class="hamster__limb hamster__limb--fl"></div>
+                <div class="hamster__limb hamster__limb--br"></div>
+                <div class="hamster__limb hamster__limb--bl"></div>
+                <div class="hamster__tail"></div>
+            </div>
+        </div>
+        <div class="spoke"></div>
+        <p>Caricando i file...</p>
+    </div>
+
+    <div id="true" style="display: none;">
+        <p class="p-benvenuto">
+            Ciao Lore! Benvenuto nella tua guida personalizzata dei 37 sensori di <span class="p-benvenuto-span">Arduino</span>
+        </p>
+    
+        <div class="div-psw">
+            <p class="p-inserire" id="p-inserire">.</p>
+            <div class="div-psw-buttons">
+                <div class="form-control">
+                    <input type="value" required="" type="password" id="input">
+                    <label>
+                        <span style="transition-delay:0ms">P</span><span style="transition-delay:50ms">a</span><span style="transition-delay:100ms">s</span><span style="transition-delay:150ms">s</span><span style="transition-delay:200ms">w</span><span style="transition-delay:250ms">o</span><span style="transition-delay:300ms">r</span><span style="transition-delay:350ms">d</span>
+                    </label>
+                </div>        
+                <button class="div-psw-buttons-login" onclick="Accedi()">
+                    <p class="div-psw-buttons-login-p">Login</p>
+                </button>
+            </div>
+        </div>    
+    </div>
+
+
+
+    <script>
+        setTimeout(function(){
+            document.getElementById('false').style.display = 'none'
+            document.getElementById('true').style.display = 'block'
+            console.log('ci')
+        }, 1500)
+
+
+
+
+
+        let pInserire = document.getElementById("p-inserire")
+
+        function Accedi(){
+            let inputValue = document.getElementById('input').value
+            
+            if(inputValue == "lore(o)(o)"){
+                window.location.href = "./sceglisensore/index.html";
+            }else if(inputValue == ""){
+                pInserire.style.opacity = '0%'
+            }else{
+                pInserire.style.opacity = '100%'
+                pInserire.innerHTML = "Password errata, prova di nuovo"
+                pInserire.style.color = "red"
+            }
+        }
+
+        document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 13) {
+                Accedi()
+            }
+        });
+
+        Accedi()
+    </script>
+
+</body>
+</html>
